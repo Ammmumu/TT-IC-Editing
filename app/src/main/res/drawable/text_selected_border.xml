@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 背景层 - 半透明黑色 -->
+    <item>
+        <shape>
+            <solid android:color="#00FFFFFF" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+
+    <!-- 选中边框层 - 黑色边框 -->
+    <item>
+        <shape>
+            <stroke
+                android:width="3dp"
+                android:color="#000000" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+
+</layer-list>

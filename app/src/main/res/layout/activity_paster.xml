@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-material3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- 图片显示区域 - 支持缩放和平移 -->
+    <FrameLayout
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="645dp">
+
+        <!-- 使用自定义ImageView实现缩放功能 -->
+        <com.example.myapplication.widget.ZoomableImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="645dp"
+            android:scaleType="matrix" />
+    </FrameLayout>
+
+    <!-- 底部功能按钮栏 -->
+    <LinearLayout
+        android:id="@+id/edit_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:elevation="8dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
+
+        <!-- 功能按钮行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- 取消按钮 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="0dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:text="×"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <!-- 中间可滑动的比例选择区域 -->
+            <HorizontalScrollView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:scrollbars="none"
+                android:fadeScrollbars="true"
+                android:layout_marginHorizontal="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- 图片1 按钮 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageButton
+                            android:id="@+id/btn_picture1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/pic1"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="图片1"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="图片1"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!-- 图片2 按钮 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageButton
+                            android:id="@+id/btn_picture2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/pic2"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="图片2"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="图片2"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!-- 图片3 按钮 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageButton
+                            android:id="@+id/btn_picture3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/pic3"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="图片3"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="图片3"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!-- 图片4 按钮 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageButton
+                            android:id="@+id/btn_picture4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/pic4"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="图片4"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="图片4"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!-- 图片5 按钮 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageButton
+                            android:id="@+id/btn_picture5"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/pic5"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="图片5"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="图片5"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!-- 图片6 按钮 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageButton
+                            android:id="@+id/btn_picture6"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/pic6"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="图片6"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="图片6"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!-- 图片7 按钮 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageButton
+                            android:id="@+id/btn_picture7"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/pic7"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="图片7" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="图片7"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- 确认按钮 -->
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="√"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

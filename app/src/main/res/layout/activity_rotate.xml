@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-material3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- 图片显示区域 - 支持缩放和平移 -->
+    <FrameLayout
+        android:id="@+id/image_container"
+        android:layout_width="match_parent"
+        android:layout_height="645dp">
+
+        <!-- 使用自定义ImageView实现缩放功能 -->
+        <com.example.myapplication.widget.ZoomableImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="645dp"
+            android:scaleType="matrix" />
+
+    </FrameLayout>
+
+    <!-- 底部功能按钮栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:elevation="8dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
+
+
+        <!-- 功能按钮行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- 取消按钮 -->
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="0dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="×"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <!-- 功能按钮行 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- 顺时针90度按钮 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageButton
+                        android:id="@+id/btn_clockwise90"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_clockwise90"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="顺时针90度"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="顺时针90°"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- 逆时针90度按钮 -->
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageButton
+                        android:id="@+id/btn_anticlockwise90"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_anticlockwise90"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="逆时针90度"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="逆时针90度"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- 旋转180度按钮 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageButton
+                        android:id="@+id/btn_rotate180"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_rotate180"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="旋转180度"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="旋转180°"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 确认按钮 -->
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="√"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
